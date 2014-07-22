@@ -27,8 +27,9 @@ update the supported platforms list.
 
 Attributes
 ==========
+`node["simple_iptables"]["tables"]` attribute allows to specify the list of iptables tables, which you want to use on you node. It may be necessary, if you haven't any iptables table on you node. For example: you using stateless firewall. Default: %w(filter nat mangle raw)
 
-This cookbook uses node attributes to track internal state when generating
+This cookbook uses other node attributes to track internal state when generating
 the iptables rules and policies. These attributes _should not_ be overridden
 by roles, other recipes, etc.
 
